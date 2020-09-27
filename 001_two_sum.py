@@ -1,5 +1,11 @@
 class Solution(object):
     def two_sum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+
         # enumerate values to index 0 and index in index 1 of each tuple
         nums_index = [(v, index) for index, v in enumerate(nums)]
 
