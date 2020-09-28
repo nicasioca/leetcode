@@ -3,7 +3,7 @@ class ListNode(object):
         self.val = x
         self.next = None
 
-class Solution(object):
+class Solution:
 
     def add_two_numbers(self, l1, l2):
         """

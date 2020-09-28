@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def longest_palindrome(self, s):
         """
         :type s: str

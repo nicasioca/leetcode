@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def length_of_longest_substring(self, s):
         """
         :type s: str
