@@ -23,30 +23,30 @@ if __name__ == '__main__':
     s = Solution()
     print(s.is_palindrome(1001))
     
-    # STEP 0
-    # curr:  0
-    # rev_x:  0
-    # temp:  1001
+# STEP 0
+# curr:  0
+# rev_x:  0
+# temp:  1001
 
-    # STEP 1
-    # curr:  1
-    # rev_x:  1
-    # temp:  100
-    
-    # STEP 2
-    # curr:  0
-    # rev_x:  10
-    # temp:  10
+# STEP 1
+# curr:  1
+# rev_x:  1
+# temp:  100
 
-    # STEP 3
-    # curr:  0
-    # rev_x:  100
-    # temp:  1
+# STEP 2
+# curr:  0
+# rev_x:  10
+# temp:  10
 
-    # STEP 4
-    # curr:  1
-    # rev_x:  1001
-    # temp:  0
+# STEP 3
+# curr:  0
+# rev_x:  100
+# temp:  1
 
-    # FINAL STEP
-    # True
+# STEP 4
+# curr:  1
+# rev_x:  1001
+# temp:  0
+
+# FINAL OUTPUT
+# True
