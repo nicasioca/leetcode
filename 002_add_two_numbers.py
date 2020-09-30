@@ -4,13 +4,7 @@ class ListNode(object):
         self.next = None
 
 class Solution:
-
-    def add_two_numbers(self, l1, l2):
-        """
-        :type l1: ListNode
-        :type l2: ListNode
-        :rtype: ListNode
-        """
+    def add_two_numbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         carry = 0
         
         # dummy head node to point to the beginning

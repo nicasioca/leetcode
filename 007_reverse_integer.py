@@ -1,9 +1,6 @@
 class Solution:
-    def reverse(self, x):
-        """
-        :type s: int
-        :rtype: int
-        """
+    def reverse(self, x: int) -> int:
+        
         res, is_pos = 0, 1
 
         # If negative, remember negative number

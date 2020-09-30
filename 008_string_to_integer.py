@@ -1,9 +1,6 @@
 class Solution:
-    def my_atoi(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+    def my_atoi(self, s: str) -> int:
+        
         try:
             s = s.lstrip() + '$' # remove leading spaces and append an end mark
 

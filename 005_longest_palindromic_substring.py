@@ -1,9 +1,6 @@
 class Solution:
-    def longest_palindrome(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
+    def longest_palindrome(self, s: str) -> str:
+        
         # Manacher algorithm
         #http://en.wikipedia.org/wiki/Longest_palindromic_substring
         # Transform S into T.

@@ -1,9 +1,6 @@
 class Solution:
-    def length_of_longest_substring(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+    def length_of_longest_substring(self, s: str) -> int:
+        
         char_map = {}
 
         # Set char_map for all unicode characters that represent the ASCII table
