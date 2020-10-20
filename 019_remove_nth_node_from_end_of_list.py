@@ -1,9 +1,9 @@
-class ListNode():
+class ListNode:
     def __init__(self, x: int):
         self.val = x
         self.next = None
 
-class Solution():
+class Solution:
     def remove_nth_from_end(self, head: ListNode, n: int) -> ListNode:
         
         # return None if head is None

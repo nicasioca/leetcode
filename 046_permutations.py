@@ -1,5 +1,5 @@
 class Solution:
-    def permute(self, nums):
+    def permute(self, nums: list) -> list:
 
         result = []
 
@@ -12,7 +12,7 @@ class Solution:
 
         return result
 
-    def get_permute(self, result, nums, index):
+    def get_permute(self, result: list, nums: list, index: int) -> list:
 
         # return list at the end
         if index == len(nums):
@@ -22,7 +22,7 @@ class Solution:
         # iterate the values over the length of the list
         for i in range(index, len(nums)):
 
-            # swap opposite sides as you continue to recurse down
+            # swap sides as you continue to recurse down
             nums[i], nums[index] = nums[index], nums[i]
 
             # increment index and recursively call down

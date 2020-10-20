@@ -1,9 +1,9 @@
-class ListNode():
+class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
 
-class Solution():
+class Solution:
     def merge_two_lists(self, l1, l2):
 
         # set beginning node

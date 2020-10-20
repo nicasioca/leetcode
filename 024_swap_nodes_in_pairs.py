@@ -1,9 +1,9 @@
-class ListNode():
+class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
 
-class Solution():
+class Solution:
     def swap_pairs(self, head: ListNode) -> ListNode:
         
         # create dummy to point to head
