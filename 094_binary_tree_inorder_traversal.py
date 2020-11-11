@@ -8,7 +8,7 @@ class TreeNode:
 
 class Solution:
     # stack solution
-    # def in_order_traversal(self, root):
+    # def in_order_traversal(self, root: TreeNode) -> [int]:
     #     res = []
     #     stack = []
     #     while root is not None:
@@ -34,13 +34,13 @@ class Solution:
     #     return res
 
     # recursive solution
-    def in_order_traversal(self, root):
+    def in_order_traversal(self, root: TreeNode) -> [int]:
         res = []
         self.in_order_traversal_helper(res, root)
         return res
 
-    def in_order_traversal_helper(self, res, curr):
-        # case case return None
+    def in_order_traversal_helper(self, res: [int], curr: TreeNode):
+        # base case return None
         if curr is None:
             return
 
