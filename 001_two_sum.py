@@ -1,6 +1,8 @@
+from typing import List
+
 class Solution:
-    def two_sum(self, nums: [int], target: int) -> [int]:
-        
+    def two_sum(self, nums: List[int], target: int) -> List[int]:
+
         # enumerate values to index 0 and index in index 1 of each tuple
         nums_index = [(v, index) for index, v in enumerate(nums)]
 
@@ -14,7 +16,7 @@ class Solution:
             # match sum equals target return index 1 positions of the tuples
             if curr == target:
                 return [nums_index[begin][1], nums_index[end][1]]
-            
+
             # sum too small increment from beginning to use larger number
             elif curr < target:
                 begin += 1

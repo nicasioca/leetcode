@@ -1,5 +1,7 @@
+from typing import List
+
 class Solution:
-    def plus_one(self, digits: int) -> [int]:
+    def plus_one(self, digits: int) -> List[int]:
         ls = len(digits)
 
         # reverse the index to increment from least significant value

@@ -1,5 +1,7 @@
+from typing import List
+
 class Solution:
-    def spiral_order(self, matrix: [[int]]) -> [int]:
+    def spiral_order(self, matrix: List[List[int]]) -> List[int]:
         result = []
 
         if not matrix:
@@ -24,7 +26,7 @@ class Solution:
             if matrix[(i + di) % m][(j + dj) % n] == '':
                 # down (1, 0) -> left (0, -1) -> up (-1, 0) -> right (0, 1)
                 di, dj = dj, -di
-                
+
             # add i, j to latest di, dj values to keep iterating or shift value position
             i += di
             j += dj

@@ -1,5 +1,7 @@
+from typing import List
+
 class Solution:
-    def unique_paths_with_obstacles(self, obstacle_grid: [[int]]) -> int:
+    def unique_paths_with_obstacles(self, obstacle_grid: List[List[int]]) -> int:
 
         # get size of matrix by rows and columns
         m, n = len(obstacle_grid), len(obstacle_grid[0])

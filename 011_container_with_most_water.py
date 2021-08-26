@@ -1,5 +1,7 @@
+from typing import List
+
 class Solution:
-    def max_area(self, height: [int]) -> int:
+    def max_area(self, height: List[int]) -> int:
         # Two points/walls to figure the max amount of water
         left, right = 0, len(height) - 1
         result = 0

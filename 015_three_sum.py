@@ -1,5 +1,7 @@
+from typing import List
+
 class Solution:
-    def three_sum(self, nums: [int], target: int) -> [[int]]:
+    def three_sum(self, nums: List[int], target: int) -> List[List[int]]:
 
         results = []
 

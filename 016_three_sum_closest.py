@@ -1,5 +1,7 @@
+from typing import List
+
 class Solution:
-    def three_sum_closest(self, nums: [int], target: int) -> int:
+    def three_sum_closest(self, nums: List[int], target: int) -> int:
         ls = len(nums)
         sort_nums = sorted(nums)
         res = nums[0] + nums[1] + nums[2]

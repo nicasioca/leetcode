@@ -1,5 +1,7 @@
+from typing import Listv
+
 class Solution:
-    def subsets(self, nums: int) -> [int]:
+    def subsets(self, nums: int) -> List[int]:
         nums.sort()
         res = [[]]
         for index in range(len(nums)):

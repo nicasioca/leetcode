@@ -1,15 +1,17 @@
+from typing import List
+
 class Solution:
-    def search_insert(self, nums: [int], target: int) -> int:
+    def search_insert(self, nums: List[int], target: int) -> int:
         l, r = 0, len(nums) - 1
         while l < r:
             mid = int((l + r) / 2)
 
-            # look right (set l to floor) 
+            # look right (set l to floor)
             # if num is less than target
             if nums[mid] < target:
                 l = mid + 1
 
-            # look left (set r to ceiling) 
+            # look left (set r to ceiling)
             # if num is greater than target
             else:
                 r = mid
