@@ -1,22 +1,17 @@
 class Solution:
     def climbing_stairs(self, n: int) -> int:
 
-        # return one path for 1 step
-        if n <= 1:
-            return 1
+      # start with 1 step or 2 steps
+      step1, step2 = 1, 1
 
-        # keep track of two positions
-        # previous and current number of distinct paths
-        dp = [1] * 2
-
-        # iterate the number of total steps
-        # add previous number of distinct paths
-        # with the current number of distinct paths
-        for i in range(2, n + 1):
-            dp[0], dp[1] = dp[1], dp[0] + dp[1]
-
-        # return the current number of distinct paths
-        return dp[1]
+      # otherwise, calculate the additional ways
+      for i in range(n):
+        temp = step2
+        step2 = step1 + step2
+        step1 = temp
+      
+      # return the total numbers of ways to step from step1
+      return step1
 
 
 if __name__ == '__main__':
