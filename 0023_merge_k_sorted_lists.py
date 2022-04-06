@@ -40,3 +40,4 @@ linked_list = Solution().mergeKLists(lists)
 while linked_list:
   print(linked_list.val)
   linked_list = linked_list.next
+  
