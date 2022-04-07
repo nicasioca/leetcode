@@ -41,10 +41,10 @@ class Solution:
 
 if __name__ == '__main__':
   # create linked list of 2 -> 4 -> 3
-  l1 = ListNode(2, ListNode(4, ListNode(3))
+  l1 = ListNode(2, ListNode(4, ListNode(3)))
 
   # create linked list of 5 -> 6 -> 4
-  l2 = ListNode(5, ListNode(6, ListNode(4))
+  l2 = ListNode(5, ListNode(6, ListNode(4)))
 
   s = Solution()
 
