@@ -1,12 +1,13 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        dic, res, start, = {}, 0, 0
-        for i, ch in enumerate(s):
-            if ch in dic:
-                res = max(res, i-start) # update the res
-                start = max(start, dic[ch]+1)  # here should be careful, like "abba"
-            dic[ch] = i
-        return max(res, len(s)-start)  # return should consider the last non-repeated substring
+        seen = {}
+        mx = left = 0
+        for right, c in enumerate(s):
+            if c in seen:
+                left = max(left, seen[c] + 1)
+            seen[c] = right
+            mx = max(mx, right-left+1)
+        return mx
 
 if __name__ == '__main__':
     s = Solution()
