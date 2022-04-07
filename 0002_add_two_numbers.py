@@ -1,7 +1,8 @@
+# Definition for singly-linked list.
 class ListNode:
-  def __init__(self, x):
-    self.val = x
-    self.next = None
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
 class Solution:
   def add_two_numbers(self, l1: ListNode, l2: ListNode) -> ListNode:
@@ -40,20 +41,10 @@ class Solution:
 
 if __name__ == '__main__':
   # create linked list of 2 -> 4 -> 3
-  one_three = ListNode(3)
-  one_four = ListNode(4)
-  one_two = ListNode(2)
-  one_four.next = one_three
-  one_two.next = one_four
-  l1 = one_two
+  l1 = ListNode(2, ListNode(4, ListNode(3))
 
   # create linked list of 5 -> 6 -> 4
-  two_four = ListNode(4)
-  two_six = ListNode(6)
-  two_five = ListNode(5)
-  two_six.next = two_four
-  two_five.next = two_six
-  l2 = two_five
+  l2 = ListNode(5, ListNode(6, ListNode(4))
 
   s = Solution()
 
