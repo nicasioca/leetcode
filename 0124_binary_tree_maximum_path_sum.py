@@ -12,7 +12,7 @@ class Solution:
         return self.current_max
 
     def maxPathSumHelper(self, root):
-        if root is None:
+        if root == None:
             return root
         
         left = self.maxPathSumHelper(root.left)
