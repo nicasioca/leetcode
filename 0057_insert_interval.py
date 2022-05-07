@@ -1,5 +1,6 @@
 import math
 from collections import Counter
+from typing import List
 
 class Solution:
   def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
@@ -10,6 +11,10 @@ class Solution:
       if intervals == []:
         return [newInterval]
 
+      # handle if new interval encompasses all intervals
+      if intervals[0][0] > newInterval[0] and intervals[-1][1] < newInterval[1]:
+        return [newInterval]
+
       # verify if overlaps exist
       for idx, inter in enumerate(intervals):
         for i in range(inter[0], inter[1]+1):
@@ -17,8 +22,8 @@ class Solution:
             if i == j:
               overlap[idx] = idx
 
-      # merge the existing overlap intervals
       count = Counter(overlap)
+      # if overlaps exist, merge the existing overlap intervals
       if len(count.keys()) > 1 or -1 not in count.keys():
         start = math.inf
         end = -math.inf
@@ -48,6 +53,8 @@ class Solution:
               change += 1
 
         return res
+      
+      # handle the non-overlapping case
       else:
         # handle if new interval insert at beginning
         if intervals[0][0] > newInterval[0] and intervals[0][1] > newInterval[1]:
@@ -59,7 +66,7 @@ class Solution:
             intervals.append(newInterval)
             return intervals
 
-        # handle the non-overlapping case of inserting new interval in between
+        # handle case of inserting new interval in between
         for i in range(1, len(intervals)):
           if intervals[i-1][0] < newInterval[0] and intervals[i-1][1] < newInterval[1] \
               and intervals[i][0] > newInterval[0] and intervals[i][1] > newInterval[1]:
@@ -69,9 +76,6 @@ class Solution:
       # return if no change
       return intervals
 
-
-# 152 / 156 test cases passed.
-# Time Limit Exceeded
 
 # Example 1:
 # Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
