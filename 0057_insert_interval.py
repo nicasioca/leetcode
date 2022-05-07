@@ -6,15 +6,18 @@ class Solution:
       res = []
       overlap = [-1]*len(intervals)
 
+      # return new interval if empty
       if intervals == []:
         return [newInterval]
 
+      # verify if overlaps exist
       for idx, inter in enumerate(intervals):
         for i in range(inter[0], inter[1]+1):
           for j in range(newInterval[0], newInterval[1]+1):
             if i == j:
               overlap[idx] = idx
 
+      # merge the existing overlap intervals
       count = Counter(overlap)
       if len(count.keys()) > 1 or -1 not in count.keys():
         start = math.inf
@@ -25,6 +28,7 @@ class Solution:
             end = max(end, inter[1])
         mergeInterval = [start, end]
 
+        # merge the new interval with the overlapping intervals
         start = math.inf
         end = -math.inf
         for i in range(mergeInterval[0], mergeInterval[1]+1):
@@ -33,6 +37,7 @@ class Solution:
             end = max(end, i, j)
         mergeIntervalFinal = [start, end]
 
+        # create final result of intervals
         change = 0
         for idx, inter in enumerate(intervals):
           if overlap[idx] == -1:
@@ -44,18 +49,24 @@ class Solution:
 
         return res
       else:
+        # handle if new interval insert at beginning
+        if intervals[0][0] > newInterval[0] and intervals[0][1] > newInterval[1]:
+            intervals.insert(0, newInterval)
+            return intervals
+            
+        # handle if new interval insert at end
+        if intervals[-1][0] < newInterval[0] and intervals[-1][1] < newInterval[1]:
+            intervals.append(newInterval)
+            return intervals
+
+        # handle the non-overlapping case of inserting new interval in between
         for i in range(1, len(intervals)):
           if intervals[i-1][0] < newInterval[0] and intervals[i-1][1] < newInterval[1] \
               and intervals[i][0] > newInterval[0] and intervals[i][1] > newInterval[1]:
             intervals.insert(i, newInterval)
-            break
+            return intervals
 
-        if intervals[0][0] > newInterval[0] and intervals[0][1] > newInterval[1]:
-            intervals.insert(0, newInterval)
-            
-        if intervals[-1][0] < newInterval[0] and intervals[-1][1] < newInterval[1]:
-            intervals.append(newInterval)
-            
+      # return if no change
       return intervals
 
 
