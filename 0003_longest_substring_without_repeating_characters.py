@@ -1,5 +1,5 @@
 class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
+    def length_of_longest_substring(self, s: str) -> int:
         left = longest = 0
         used = {}
         for right, c in enumerate(s):
@@ -12,7 +12,7 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    print(s.lengthOfLongestSubstring('abcdefghijj'))
+    print(s.length_of_longest_substring('abcdefghijj'))
     # Output: 10
 
 # Example 1:

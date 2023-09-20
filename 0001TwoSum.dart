@@ -1,5 +1,4 @@
 class Solution {
-
   var _nums_index;
   var _target;
   Solution(this._nums_index, this._target);
