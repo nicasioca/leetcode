@@ -25,6 +25,9 @@ class Solution:
       else:
         end -= 1
 
+    # return no such pair exists
+    return []
+
 if __name__ == '__main__':
   s = Solution()
   # Input: nums = [3,2,4], target = 6
